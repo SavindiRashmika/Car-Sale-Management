@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="625.0" prefWidth="436.0" stylesheets="@../style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.motorComplex.Controller.SupplierAddFormController">
+   <styleClass>
+      <String fx:value="shadow" />
+      <String fx:value="white-bg" />
+   </styleClass>
+   <children>
+      <Text layoutX="35.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street           :" wrappingWidth="116.53515625">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City              :" wrappingWidth="116.53516322374344">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lane            :" wrappingWidth="116.53516322374344">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtSupplierId" layoutX="152.0" layoutY="121.0" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtFirstName" layoutX="152.0" layoutY="173.0" onKeyReleased="#firstKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtLastName" layoutX="152.0" layoutY="227.0" onKeyReleased="#lastKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtContactNumber" layoutX="152.0" layoutY="277.0" onKeyReleased="#contactKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtStreet" layoutX="152.0" layoutY="324.0" onKeyReleased="#streetKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtCity" layoutX="152.0" layoutY="373.0" onKeyReleased="#cityKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <TextField fx:id="txtLane" layoutX="152.0" layoutY="426.0" onKeyReleased="#laneKeyReleased" prefHeight="25.0" prefWidth="210.0" />
+      <Text layoutX="21.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name       :" wrappingWidth="132.7714787721634">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name        :" wrappingWidth="132.7714787721634">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number :" wrappingWidth="132.77148437499994">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier ID        :" wrappingWidth="132.7714787721634">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="65.0" layoutY="30.0" prefHeight="30.0" prefWidth="259.0" text="            Supplier Details" textFill="#063e8d">
+         <font>
+            <Font name="Elephant" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSave" layoutX="289.0" layoutY="489.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="30.0" prefWidth="88.0" stylesheets="@../style/Login.css" text="Save">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Line endX="108.0" endY="-1.52587890625E-5" layoutX="209.0" layoutY="68.0" startX="-128.0" startY="-1.52587890625E-5" />
+   </children>
+</AnchorPane>

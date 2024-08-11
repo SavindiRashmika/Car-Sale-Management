@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1373.0" stylesheets="@../style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.motorComplex.Controller.SalaryFormController">
+   <children>
+      <AnchorPane prefHeight="718.0" prefWidth="328.0" styleClass="leftPane" stylesheets="@../style/Dashboard.css">
+         <children>
+            <Line endX="131.0" layoutX="161.0" layoutY="203.0" startX="-118.0" />
+            <Button layoutY="250.0" mnemonicParsing="false" onAction="#dashboardOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="           Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="442.0" mnemonicParsing="false" onAction="#carInventoryOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="              Car Inventory">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="60.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Inventory.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="375.0" mnemonicParsing="false" onAction="#supplierOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="     Supplier">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="314.0" mnemonicParsing="false" onAction="#employeeOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="        Employee">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="53.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/emp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="122.0" fitWidth="167.0" layoutX="114.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adminn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="60.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dashboard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="173.0" prefHeight="17.0" prefWidth="196.0" text="           Welcome Admin" textFill="#37c6b3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="54.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/cashier.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="506.0" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="54.0" prefWidth="329.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="  Report">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="6.0" layoutY="560.0" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="54.0" prefWidth="329.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="Salary">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="43.0" layoutX="61.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Report03.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="64.0" layoutY="575.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/salary1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1312.0" layoutY="14.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/close-window.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="389.0" layoutY="257.0" prefHeight="362.0" prefWidth="912.0" stylesheets="@../style/Dashboard.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <TableView fx:id="salaryTbl" layoutX="33.0" layoutY="93.0" onMouseClicked="#tblMouseClick" prefHeight="582.0" prefWidth="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
+               <columns>
+                  <TableColumn fx:id="tblEmployeeID" prefWidth="229.0" text="Employee ID" />
+                  <TableColumn fx:id="tblSalaryId" prefWidth="234.0" text="Salary ID" />
+                  <TableColumn fx:id="tblDate" prefWidth="223.0" text="Date" />
+                  <TableColumn fx:id="tblSalary" prefWidth="225.0" text="Salary" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="39.0" layoutY="26.0" prefHeight="25.0" prefWidth="360.0" promptText="  Search" styleClass="search" stylesheets="@../style/page.css" />
+            <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="47.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="389.0" layoutY="36.0" prefHeight="200.0" prefWidth="912.0" stylesheets="@../style/page.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <Text layoutX="63.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID :" wrappingWidth="99.99999958276749">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbEmployeeID" layoutX="183.0" layoutY="23.0" onAction="#cmbEmployeeIDOnAction" prefHeight="25.0" prefWidth="209.0" />
+            <Text layoutX="63.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Salary  :" wrappingWidth="99.99999958276749">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtdailySalary" layoutX="183.0" layoutY="145.0" prefHeight="25.0" prefWidth="209.0" promptText="LKR" />
+            <Text layoutX="478.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Salary  :" wrappingWidth="121.99999958276749">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtSalary" layoutX="614.0" layoutY="100.0" prefHeight="25.0" prefWidth="222.0" promptText="LKR" />
+            <Text layoutX="14.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Attendance  :" wrappingWidth="148.9999995827675">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtAttendance" layoutX="183.0" layoutY="100.0" prefHeight="25.0" prefWidth="209.0" />
+            <Button layoutX="749.0" layoutY="146.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="20.0" prefWidth="109.0" stylesheets="@../style/Login.css" text="Save">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Text layoutX="478.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name :" wrappingWidth="121.99999958276749">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="txtName" layoutX="621.0" layoutY="40.0" prefHeight="17.0" prefWidth="188.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Text layoutX="63.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary ID    :" wrappingWidth="99.99999958276749">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtSalaryID" layoutX="183.0" layoutY="59.0" prefHeight="25.0" prefWidth="209.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="1192.0" layoutY="644.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="20.0" prefWidth="109.0" stylesheets="@../style/Login.css" text="Back">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button layoutX="1037.0" layoutY="644.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="20.0" prefWidth="109.0" stylesheets="@../style/Login.css" text="Delete">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

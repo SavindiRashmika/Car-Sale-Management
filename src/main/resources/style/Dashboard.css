@@ -1,0 +1,55 @@
+.DashBtn{
+    -fx-background-color:  #181D31;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-text-fill: #ffff;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 16px;
+}
+.DashBtn:hover{
+    -fx-background-color : #37306B;
+    -fx-text-fill: #ffff;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.8), 8,0,0,0);
+}
+.white-bg{
+    -fx-background-color: #fff;
+}
+/*.combo-box{*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-border-color: #181D31;*/
+/*    -fx-background-radius: 8px;*/
+/*    -fx-cursor: hand;*/
+/*    -fx-: #ffff;*/
+/*    -fx-font-family: "Arial Black";*/
+/*    -fx-font-size: 16px;*/
+/*}*/
+/*.combo-box:focused{*/
+/*    -fx-border-width: 3px;*/
+
+/*}*/
+/*.combo-box:hover{*/
+/*    -fx-background-color : #37306B;*/
+/*    -fx-text-fill: #000;*/
+/*}*/
+.leftPane{
+    -fx-background-color:  #181D31;
+}
+.dbtn{
+    -fx-background-color: #181D31,#227C70 ;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #000;
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 13px;
+}
+.dbtn:hover{
+    -fx-text-fill: #000;
+}
+.Llabel{
+    -fx-border-color: transparent;
+
+}
+.Llabel:hover{
+    -fx-text-fill: #227C70;
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1373.0" stylesheets="@../style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.motorComplex.Controller.ReportFormController">
+   <children>
+      <AnchorPane prefHeight="718.0" prefWidth="328.0" styleClass="leftPane" stylesheets="@../style/Dashboard.css">
+         <children>
+            <Line endX="131.0" layoutX="161.0" layoutY="203.0" startX="-118.0" />
+            <Button layoutY="250.0" mnemonicParsing="false" onAction="#dashboardOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="           Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="442.0" mnemonicParsing="false" onAction="#carInventoryOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="             Car Inventory">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="53.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Inventory.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="375.0" mnemonicParsing="false" onAction="#supplierOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="     Supplier">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="314.0" mnemonicParsing="false" onAction="#employeeOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="        Employee">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="53.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/emp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="122.0" fitWidth="167.0" layoutX="114.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adminn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="60.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dashboard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="173.0" prefHeight="17.0" prefWidth="196.0" text="           Welcome Admin" textFill="#37c6b3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="54.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/cashier.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="506.0" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="54.0" prefWidth="329.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="Report">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="61.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Report03.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="6.0" layoutY="572.0" mnemonicParsing="false" onAction="#salaryOnAction" prefHeight="54.0" prefWidth="329.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="Salary">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="43.0" layoutX="61.0" layoutY="584.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/salary1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="1302.0" layoutY="17.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/close-window.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="455.0" layoutY="100.0" mnemonicParsing="false" onAction="#employeeReportOnAction" prefHeight="74.0" prefWidth="299.0" stylesheets="@../style/page.css" text="Employee Attandance">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <styleClass>
+            <String fx:value="search" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button layoutX="455.0" layoutY="237.0" mnemonicParsing="false" onAction="#supplierReport" prefHeight="74.0" prefWidth="299.0" stylesheets="@../style/page.css" text="Supplier Order Report">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <styleClass>
+            <String fx:value="search" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <Button layoutX="455.0" layoutY="393.0" mnemonicParsing="false" onAction="#custOrderOnAction" prefHeight="74.0" prefWidth="299.0" stylesheets="@../style/page.css" text="Customer Order Report">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <styleClass>
+            <String fx:value="search" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </Button>
+      <ImageView fitHeight="496.0" fitWidth="597.0" layoutX="777.0" layoutY="219.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/report.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="403.0" layoutY="30.0" prefHeight="17.0" prefWidth="183.0" text="Report " textFill="#142479">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

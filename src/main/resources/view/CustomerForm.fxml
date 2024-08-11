@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1373.0" stylesheets="@../style/Dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.motorComplex.Controller.CustomerFormController">
+   <children>
+      <AnchorPane prefHeight="718.0" prefWidth="328.0" styleClass="leftPane" stylesheets="@../style/Dashboard.css">
+         <children>
+            <Line endX="131.0" layoutX="161.0" layoutY="203.0" startX="-118.0" />
+            <Button layoutY="250.0" mnemonicParsing="false" onAction="#dashboardOnAction" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="           Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="314.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="322.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="       Customer">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="53.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/emp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="122.0" fitWidth="167.0" layoutX="114.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adminn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="60.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dashboard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="103.0" layoutY="162.0" prefHeight="17.0" prefWidth="182.0" text="Welcome Cashier" textFill="#37c6b3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutY="377.0" mnemonicParsing="false" onAction="#attendanceOnAction" prefHeight="54.0" prefWidth="329.0" styleClass="DashBtn" stylesheets="@../style/Dashboard.css" text="         Attendance">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="43.0" layoutX="60.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Attendance1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1330.0" layoutY="14.0" onMouseClicked="#closeOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/close-window.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="363.0" layoutY="94.0" prefHeight="413.0" prefWidth="956.0" stylesheets="@../style/Dashboard.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <TableView fx:id="CustomerTbl" layoutX="33.0" layoutY="93.0" onMouseClicked="#tblMouseClick" prefHeight="582.0" prefWidth="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
+               <columns>
+                  <TableColumn fx:id="tblCustId" prefWidth="162.0" text="Customer ID" />
+                  <TableColumn fx:id="tblFirstName" prefWidth="245.0" text="First Name" />
+                  <TableColumn fx:id="tblLastName" prefWidth="180.0" text="Last Name" />
+                  <TableColumn fx:id="tblContactNumber" prefWidth="203.0" text="Contact Number" />
+                  <TableColumn fx:id="tblCity" prefWidth="165.0" text="City" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="39.0" layoutY="26.0" onKeyReleased="#searchKeyReleased" prefHeight="25.0" prefWidth="360.0" promptText="  Search" styleClass="search" stylesheets="@../style/page.css" />
+            <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="47.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="1151.0" layoutY="645.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="30.0" prefWidth="168.0" styleClass="dbtn" stylesheets="@../style/Dashboard.css" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="363.0" layoutY="590.0" onAction="#CustomerOrderOnAction" prefHeight="35.0" prefWidth="387.0" styleClass="account" stylesheets="@../style/Login.css" text="Enter The Customer Order Detail ?">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Hyperlink>
+      <Button layoutX="792.0" layoutY="525.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="35.0" prefWidth="160.0" styleClass="dbtn" stylesheets="@../style/Dashboard.css" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="1159.0" layoutY="525.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="35.0" prefWidth="160.0" styleClass="dbtn" stylesheets="@../style/Dashboard.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="979.0" layoutY="525.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="35.0" prefWidth="160.0" styleClass="dbtn" stylesheets="@../style/Dashboard.css" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="363.0" layoutY="14.0" prefHeight="43.0" prefWidth="226.0" text="Customer Details" textFill="#063e8d">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <Line endX="152.0" layoutX="463.0" layoutY="57.0" startX="-111.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+.textfield{
+    -fx-background-color: linear-gradient(to bottom,#eee,#ddd);
+    -fx-background-radius: 8px;
+    -fx-border-color: #000;
+    -fx-border-width: 0px 0px .8px 0px;
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 13px;
+}
+.textfield:focused{
+    -fx-background-color: #fff;
+    -fx-border-width: 0px 0px 1.8px 0px;
+}
+.btn{
+    -fx-background-color: #227C70;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-text-fill: #000;
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+}
+.btn:hover{
+    -fx-background-color : #9ca1a1;
+    -fx-text-fill: #000;
+}
+.label{
+    -fx-border-color: transparent;
+
+}
+.label:hover{
+    -fx-text-fill: #227C70;
+}
+.account{
+    -fx-border-color: transparent;
+
+}
+.account:hover{
+    -fx-text-fill: #000;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,1), 9,0,0,0);
+}
+.white-bg{
+    -fx-background-color: #fff;
+}
